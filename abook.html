@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MailBook</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../css/font.css">
+    <!-- font awesome icons -->
+    <script src="https://kit.fontawesome.com/00830e94e7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- form modal -->
+    <div id="fullscreen"></div>
+    <form class="modal" id="modal">
+        <div class="modal-content">
+            <div class="modal-head">
+                <h3 id="modal-title">Add Address</h3>
+                <button type="button" id="close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-main">
+                <div class="modal-row">
+                    <div class="modal-col">
+                        <label for="">How should your mail be addressed?</label>
+                        <input type="text" placeholder="E.g. The Khadka Family" class="form-control"
+                            name="addr_ing_name">
+                    </div>
+                </div>
+
+                <div class="modal-row grid-row">
+                    <div class="modal-col">
+                        <label for="">First Name</label>
+                        <input type="text" placeholder="The first name" class="form-control" name="first_name">
+                    </div>
+                    <div class="modal-col">
+                        <label for="">Last Name</label>
+                        <input type="text" placeholder="The last name" class="form-control" name="last_name">
+                    </div>
+                </div>
+
+                <div class="modal-row grid-row">
+                    <div class="modal-col">
+                        <label for="">Email</label>
+                        <input type="email" placeholder="The email" class="form-control" name="email">
+                    </div>
+                    <div class="modal-col">
+                        <label for="">Phone</label>
+                        <input type="text" placeholder="The phone number" class="form-control" name="phone">
+                    </div>
+                </div>
+
+                <div class="modal-row grid-row">
+                    <div class="modal-col">
+                        <label for="">Street address</label>
+                        <input type="text" placeholder="Street address, apartment, house number, etc."
+                            class="form-control" name="street_addr">
+                    </div>
+                    <div class="modal-col">
+                        <label for="">Postal Code</label>
+                        <input type="text" placeholder="60323" class="form-control" name="postal_code">
+                    </div>
+                </div>
+
+                <div class="modal-row grid-row">
+                    <div class="modal-col">
+                        <label for="">City</label>
+                        <input type="text" placeholder="City name" class="form-control" name="city">
+                    </div>
+                    <div class="modal-col">
+                        <label for="">Country</label>
+                        <select id="country-list" name="country">
+                            <!-- <option>USA</option> -->
+                        </select>
+                    </div>
+                </div>
+
+                <div class="modal-row">
+                    <div class="modal-col">
+                        <label for="">Labels</label>
+                        <select name="labels">
+                            <option value="Family">Family</option>
+                            <option value="Friends">Friends</option>
+                            <option value="Colleagues">Colleagues</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="modal-row" id="modal-btns">
+                    <button type="submit" id="save-btn">Save</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <!-- end of form modal -->
+
+    <!-- address book home -->
+    <div class="abook" id="abook">
+        <div class="abook-content">
+            <div class="abook-head">
+                <i class="fa-solid fa-address-book fa-2x"></i>
+                <h2>Address<span>Book</span></h2>
+            </div>
+
+            <div class="abook-top">
+                <button type="button" class="btn" id="add-btn">
+                    <span><i class="fas fa-plus"></i> Add address</span>
+                </button>
+            </div>
+
+            <div class="abook-list" id="abook-list">
+                <table class="addr-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Address</th>
+                            <th>Labels</th>
+                            <th>By Name</th>
+                            <th>Phone</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- end of address book home -->
+    <script src="script.min.js"></script>
+</body>
+
+</html>
